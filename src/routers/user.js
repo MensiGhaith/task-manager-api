@@ -34,7 +34,7 @@ router.post('/users',async (req,res)=>{
         {
             
         await user.save()
-        sendEmail(user.email,user.name)
+        // sendEmail(user.email,user.name)
         const token=await user.gettoken()
 
         res.status(201).send({user,token})
